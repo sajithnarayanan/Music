@@ -52,7 +52,7 @@ import {
   },
     fileName2: {
     fontSize: 15,
-    paddingBottom: 10,
+    paddingBottom: "1%",
     paddingLeft: "1%",
     color: 'white',
   },
@@ -65,39 +65,10 @@ import {
   audioImage: {
     height: 50,
     width: 50,
-    borderWidth:1,
-    borderColor: "black",
+  
    marginTop: "2.5%",
    marginBottom: "2.5%",
    //paddingVertical: "5%",
-  },
-
-  modalViewTop: {
-    height: '60%',
-  },
-  modalViewBottom: {
-    height: '40%',
-    backgroundColor: '#376f8a',
-    padding: '4%',
-  },
-  ModalHeaderView: {
-    alignItems: 'center',
-    //paddingLeft:"30%",
-    paddingHorizontal: '10%',
-    backgroundColor: '#376f8a',
-    //marginTop:"5%",
-    marginBottom: '5%',
-  },
-  ModalHeaderText: {
-    fontSize: 21,
-    color: 'white',
-  },
-  modalIcon: {
-    padding: 20,
-    color: 'white',
-    //backgroundColor:"yellow",
-    //width: "15%",
-    //flexDirection: 'row',
   },
   dotIcon: {
     padding: 10,
@@ -110,14 +81,64 @@ import {
     //borderColor:"black",
     position:"absolute",
   },
+  modalViewTop: {
+    height: '60%',
+  },
+  modalViewBottom: {
+    height: '40%',
+    backgroundColor: '#376f8a',
+    padding: '4%',
+    borderWidth:3,
+    borderColor: "black",
+    justifyContent: 'center',
+  },
+  ModalHeaderView: {
+    alignItems: 'center',
+    //paddingLeft:"30%",
+    paddingHorizontal: '10%',
+    backgroundColor: '#376f8a',
+    //marginTop:"5%",
+    marginBottom: '5%',
+    borderWidth:1,
+    borderColor: "black",
+  },
+  ModalHeaderText: {
+    fontSize: 21,
+    color: 'white',
+    borderWidth:1,
+    borderColor: "black",
+  },
+  modalIcon: {
+    padding: 20,
+    color: 'white',
+    //backgroundColor:"yellow",
+    //width: "15%",
+    //flexDirection: 'row',
+    borderWidth:1,
+    borderColor: "black",
+  },
+
 
   IconsRow: {
     backgroundColor: '#376f8a',
-    padding: '5%',
+   // margin: '2.5%',
+    marginLeft:'7%',
+    
+    borderWidth:1,
+    borderColor: "black",
+    alignItems:'center',
   },
-  iconText: {
+  iconText:{
     color: 'white',
+    borderWidth:1,
+    borderColor: "black",
+
+    
+  
   },
+  IconTouchableOpacity:{
+    alignItems:'center',
+  }
 
 });
 
@@ -139,31 +160,31 @@ import {
 
           <View style={{flexDirection: 'row'}}>
             <View style={styles.IconsRow}>
-              <TouchableOpacity>
+              <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon1 name="stepforward" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}>Play Next</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon3 name="cut" style={styles.modalIcon} size={20} />
-                <Text style={styles.iconText}> Trim</Text>
+                <Text style={styles.iconText}>Trim</Text>
               </TouchableOpacity>
             </View>
 
             <View style={styles.IconsRow}>
-              <TouchableOpacity>
+            <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon1 name="plussquareo" style={styles.modalIcon} size={20} />
-                <Text style={styles.iconText}> Add To</Text>
+                <Text style={styles.iconText}>Add To</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon2 name="image" style={styles.modalIcon} size={20} />
-                <Text style={styles.iconText}> ArtWork</Text>
+                <Text style={styles.iconText}>ArtWork</Text>
               </TouchableOpacity>
             </View>
 
             <View style={styles.IconsRow}>
-              <TouchableOpacity>
+            <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon2
                   name="playlist-plus"
                   style={styles.modalIcon}
@@ -172,21 +193,21 @@ import {
                 <Text style={styles.iconText}> Enqueue</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon1 name="sharealt" style={styles.modalIcon} size={20} />
-                <Text style={styles.iconText}> Share</Text>
+                <Text style={styles.iconText}>Share</Text>
               </TouchableOpacity>
             </View>
 
             <View style={styles.IconsRow}>
-              <TouchableOpacity>
+            <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon1 name="bells" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}>ringtone</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity style={styles.IconTouchableOpacity}>
                 <Icon1 name="delete" style={styles.modalIcon} size={20} />
-                <Text style={styles.iconText}> delete</Text>
+                <Text style={styles.iconText}>delete</Text>
               </TouchableOpacity>
             </View>
           </View>
