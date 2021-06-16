@@ -51,7 +51,7 @@ const HomeScreen = () => {
                 <Icon name='add' size={30} style={{ left: 280, bottom: "140%" }} onPress={() => navigation.navigate('Most Play')} />
                 <Icon name='arrow-right' size={30} style={{ left: 290, bottom: "140%"  }} onPress={()=>navigation.navigate('ModalStack')} />
 
-                <Text style={{ paddingLeft:1,bottom: "140%" , fontSize: 15 }}>PLAYLIST(1)</Text>
+                <Text style={{ paddingLeft:-5,bottom: "140%" , fontSize: 15 }}>PLAYLIST(1)</Text>
             </View>
             <View style={{ backgroundColor: "#D876F9", width: "30%", height: "10%", bottom:"154%", left: "5%", justifyContent: "center" }}>
                 <TouchableOpacity><Icon name="music-note" size={30} color="white" height="20%" style={{ bottom: -18, left: 38 }} />
@@ -65,7 +65,7 @@ const HomeScreen = () => {
                     <Icon name="add" size={50} style={{ left: 30 }} onPress={() => navigation.navigate('ModalStack')} />
                 </TouchableOpacity>
             </View>
-            <View style={{bottom:"145%",height:"10%",borderWidth:2,borderColor:"grey",borderRadius:20,marginLeft:"5%"}}>
+            <View style={{bottom:"145%",height:"10%",borderWidth:2,borderColor:"grey",borderRadius:20,marginLeft:"2%"}}>
                 <Icon name="music-note"size={30} style={{left:"10%",color:"grey",top:"23%"}} />
                 <Text style={{color:"#fff",top:"15%"}}>Change song by swap</Text>
             <Icon name="play-arrow" size={30} style={{left:"40%",color:"red",bottom:"35%"}}/>
