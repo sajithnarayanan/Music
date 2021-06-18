@@ -1,10 +1,11 @@
 import React from 'react';
 import { View, Text,Image,ScrollView } from 'react-native';
-
-const Ads = () => {
+import AntDesign from 'react-native-vector-icons/AntDesign';
+const Ads = ({navigation}) => {
     return (
         <ScrollView>
         <View style={{height:820}}>
+        <AntDesign name="arrowleft" size={25} style={{left:10,top:15}} onPress={()=>navigation.goBack()} />        
             <View style={{height:200,borderRadius:25,backgroundColor:"#fff",width:"80%",marginLeft:30,top:20,alignContent:"center",marginBottom:20}}>
             <Text style={{fontWeight:"bold",top:20,left:10}}>Recomended</Text>
                 <Image source={require('../assets/ads/1.jpg')} style={{height:50,width:50,borderRadius:25,top:35,left:10}} />
@@ -20,7 +21,7 @@ const Ads = () => {
                 <Image source={require('../assets/ads/gallery.png')} style={{height:40,width:40,borderRadius:25,top:-220,left:220}} />
                 <Text style={{left:220,top:-216,fontSize:12}}>Gallery</Text>
             </View>
-            <View style={{height:400,backgroundColor:"#fff",borderRadius:25,marginLeft:25,top:20,width:"80%"}}>
+            <View style={{height:400,backgroundColor:"#fff",borderRadius:25,marginLeft:25,top:11,width:"80%"}}>
                 <Text style={{fontWeight:"bold",left:10,top:10}}>Top Rated Apps</Text>
                 <Image source={require('../assets/ads/play.jpg')} style={{height:50,width:50,borderRadius:25,top:35,left:10}} />
         <Text style={{left:10,top:35,fontSize:12}}>HD Video</Text>

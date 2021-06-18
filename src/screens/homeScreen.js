@@ -9,43 +9,43 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
             <View style={styles.one}>
-        <Icon name="menu" size={25}  onPress={() => navigation.openDrawer()}/>
-        <Text style={{left:"10%",top:-22,fontWeight:"bold"}}>Music Player</Text>
-        <Icon name="search" size={30} style={styles.icon1} onPress={() => navigation.goBack('Recent')}/>
+        <Icon name="menu" size={30} style={{top:2}} onPress={() => navigation.openDrawer()}/>
+        <Text style={{left:"12%",top:-21,fontWeight:"bold"}}>Music Player</Text>
+        <Icon name="search" size={30} style={styles.icon1} onPress={() => navigation.navigation('Settings')}/>
         <Icon name="card-giftcard" size={25} style={styles.icon2}  onPress={() => navigation.navigate('Ads')}/>
             </View>
             <View style={{flexDirection:"column",flex: 1,}}>
             <View style={styles.first}>
             <View style={styles.library}>
-                <Icon name="music-note" size={20} style={{left:20}} onPress={() => navigation.navigate('Library')}/>
+                <Icon name="music-note" size={25} style={{left:20}} onPress={() => navigation.navigate('Library')}/>
                 <Text style={{left:8}}>LIBRARY</Text>
             </View>
             <View style={styles.folder}>
-        <Icon name="folder" size={20} style={{left:25}}  onPress={() => navigation.navigate('Folder')} />
-        <Text style={{left:15}}>FOLDER</Text>
+        <Icon name="folder" size={25} style={{left:20}}  onPress={() => navigation.navigate('Folder')} />
+        <Text style={{left:10}}>FOLDER</Text>
             </View>
             <View style={styles.favorite}>
-        <Icon name="favorite-outline" size={20} style={{left:25}}onPress={() => navigation.navigate('Favorite')}/>
+        <Icon name="favorite-outline" size={25} style={{left:25}}onPress={() => navigation.navigate('Favorite')}/>
         <Text style={{left:12}}>FAVORITE</Text>
             </View>
             </View>
             <View style={styles.two}>
                 <View style={styles.play}>
-                <Icon name="anchor" size={20} style={{left:25}} onPress={() => navigation.navigate('Recent Play')}/>
+                <Icon name="anchor" size={25} style={{left:25}} onPress={() => navigation.navigate('Recent Play')}/>
             <Text>RECENT PLAY</Text>
                 </View>
                 <View style={styles.add}>
-                <Icon name="sync" size={20} style={{left:25}}onPress={() => navigation.navigate('Recent add')}/>
+                <Icon name="sync" size={25} style={{left:25}}onPress={() => navigation.navigate('Recent add')}/>
             <Text>RECENT ADD</Text>
                 </View>
                 <View style={styles.most}>
-                <Icon name="favorite-outline" size={20} style={{left:25}}onPress={() => navigation.navigate('Most Play')}/>
-            <Text>MOST PLAY</Text>
+                <Icon name="favorite-outline" size={25} style={{left:25}}onPress={() => navigation.navigate('Most Play')}/>
+            <Text style={{left:10}}>MOST PLAY</Text>
                 </View>
             </View>
             </View>
             <View style={styles.playlist}>
-            <Text>PLAYLIST(2)</Text>
+            <Text style={{top:"1%"}}>PLAYLIST(2)</Text>
             <Icon name="add" size={20} style={styles.icon4} onPress={() => navigation.navigate('Most Play')}  />
             <Icon name="arrow-right" size={20} style={styles.icon5} onPress={()=>navigation.navigate('ModalStack')}/> 
             </View>
@@ -60,10 +60,10 @@ const HomeScreen = () => {
             </View>
             <View style={styles.player}>
             <Icon name="music-note" size={30} style={{top:"5%"}}/>
-            <Text style={{top:"5%"}}>Change Song by swap</Text>
-            <Icon name="play-arrow" size={30} style={{top:"5%"}}/>
-            <Icon name="fast-forward" size={30} style={{top:"5%"}}/>
-            <Icon name="snippet-folder" size={30}style={{top:"5%"}} />
+            <Text style={{top:"10%"}}>Change Song by swap</Text>
+            <Icon name="play-arrow" size={30} style={{top:"5%",left:"70%"}}/>
+            <Icon name="fast-forward" size={30} style={{top:"5%",left:"80%"}}/>
+            <Icon name="snippet-folder" size={30}style={{top:"5%",left:"100%"}} />
             </View>
                   </View>
     );
@@ -77,12 +77,6 @@ container:{
 one:{
     left:"2%",
     top:"-5%"
-},
-image:{
-    height:1000,
-    top:-90,
-    width:"100%",
-    overflow:"visible"
 },
 icon1:{
     left:"85%",
@@ -132,8 +126,8 @@ favorite:{
 two:{
     flexDirection:"row",
     height:700,
-    bottom:"184%",
-    marginBottom:"1%"
+    bottom:"204%",
+
 
 },
 play:{
@@ -169,7 +163,7 @@ playlist:{
     paddingLeft:"5%",
     marginHorizontal:"5%",
     marginVertical:"70%",
-    marginTop:"40%"
+    marginTop:"50%"
 },
 icon4:{
     marginLeft:"50%"

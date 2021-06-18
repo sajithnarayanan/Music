@@ -41,7 +41,7 @@ const Equalizer = ({navigation}) => {
       setValue={setValue}
       setItems={setItems}
     />
-     <Image source={require('../assets/ads/equalizer.png')} style={{width:"100%",height:"100%"}}/>
+    
         </View>
     );
 }
