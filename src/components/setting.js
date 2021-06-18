@@ -92,15 +92,15 @@ const Setting = ({navigation}) => {
       <Text style={{left:25,fontSize:15,top:15}}>Show shuffle button</Text>
       <Text style={{top:20,left:25}}>Custom shuffle button show on list pages or not.</Text>
     <CheckBox 
-    containerStyle={{marginLeft:0,width:"100%",left:370,top:-30}}
+    containerStyle={{marginLeft:0,width:"100%",left:"88%",bottom:"3.5%"}}
     checked={checkboxValue}
     onPress={()=>setcheckboxValue(!checkboxValue)}
     />
   <Text style={{top:10,left:20}}>Time format</Text>
   <Text style={{top:10,left:20,fontSize:13}}>Choose 12/24h time format on lock screen page clock</Text>
-  <TouchableOpacity><Icon name="arrow-right" size={35} style={{left:370,top:-35}} /></TouchableOpacity>
-  <Text style={{left:20,top:10}}>Smart playlist track limit</Text>
-  <Text style={{left:20,top:10,fontSize:13}}>Set the limit number for the Recent play& Recent {"\n"} add& Most play</Text>
+  <TouchableOpacity><Icon name="arrow-right" size={35} style={{left:"90%",bottom:"96%"}} /></TouchableOpacity>
+  <Text style={{left:"8%",top:"1%"}}>Smart playlist track limit</Text>
+  <Text style={{left:"6%",top:10,fontSize:13}}>Set the limit number for the Recent play& Recent {"\n"} add& Most play</Text>
   <Text style={{left:350,top:-40}}> No limit</Text>
   <View style={{height:100}}>
     <Text style={{color:"yellow",paddingLeft:20,marginTop:10,backgroundColor: "#9BD3E9",}}>Headset Settings</Text>
