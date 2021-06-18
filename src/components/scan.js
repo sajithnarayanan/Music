@@ -12,7 +12,7 @@ const Scan = ({navigation}) => {
     return (
         <View style={{backgroundColor:"skyblue",height:"100%"}}>
                         <Icon name="arrow-left" size={20} style={{left:"2%",top:10}} onPress={()=>navigation.goBack()}/>
-        <Text style={{left:"15%",top:-10,fontSize:16,fontWeight:"bold"}}>Scan Libraries</Text>
+        <Text style={{left:"15%",top:-7,fontSize:16,fontWeight:"bold"}}>Scan Libraries</Text>
         <Icon name="folder-open" size={20} style={{left:"92%",top:-27}} onPress={()=>navigation.navigate('Library')}/>
             <Image source={require('../assets/ads/progress.png')} style={{left:"30%",height:"20%",width:"40%",top:100}} />
             <Text style={{left:"27%",top:"17%",fontSize:15}}>Tracks:10 Albums:33 Artists:20</Text>
