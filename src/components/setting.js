@@ -29,8 +29,8 @@ const Setting = ({navigation}) => {
        <View style={{height:30,marginBottom:-20}}>
                 <AntDesign name="arrowleft" size={25} style={{left:10,top:15}} onPress={()=>navigation.goBack()} />
                 <Text style={{fontWeight:"bold",left:55,top:-8,fontSize:15}}>Home</Text>
-                <AntDesign name="search1" size={22} style={{left:280,top:-25}}/>
-                <Icon1 name="dots-three-vertical" size={20} style={{left:325,top:-45}}/>
+                <AntDesign name="search1" size={22} style={{left:320,top:-27}}/>
+                <Icon1 name="dots-three-vertical" size={20} style={{left:375,top:-47}}/>
             </View>
                    <Text style={{color:"yellow",top:40,paddingLeft:20,backgroundColor:"#9BD3E9",marginBottom:40}}>Normal Settings</Text>
                   <View>
@@ -92,16 +92,16 @@ const Setting = ({navigation}) => {
       <Text style={{left:25,fontSize:15,top:15}}>Show shuffle button</Text>
       <Text style={{top:20,left:25}}>Custom shuffle button show on list pages or not.</Text>
     <CheckBox 
-    containerStyle={{marginLeft:0,width:"100%",left:310,top:-30}}
+    containerStyle={{marginLeft:0,width:"100%",left:370,top:-30}}
     checked={checkboxValue}
     onPress={()=>setcheckboxValue(!checkboxValue)}
     />
   <Text style={{top:10,left:20}}>Time format</Text>
   <Text style={{top:10,left:20,fontSize:13}}>Choose 12/24h time format on lock screen page clock</Text>
-  <TouchableOpacity><Icon name="arrow-right" size={35} style={{left:310,top:-5}} /></TouchableOpacity>
+  <TouchableOpacity><Icon name="arrow-right" size={35} style={{left:370,top:-35}} /></TouchableOpacity>
   <Text style={{left:20,top:10}}>Smart playlist track limit</Text>
   <Text style={{left:20,top:10,fontSize:13}}>Set the limit number for the Recent play& Recent {"\n"} add& Most play</Text>
-  <Text style={{right:-305,top:-40}}> No limit</Text>
+  <Text style={{left:350,top:-40}}> No limit</Text>
   <View style={{height:100}}>
     <Text style={{color:"yellow",paddingLeft:20,marginTop:10,backgroundColor: "#9BD3E9",}}>Headset Settings</Text>
   </View>
