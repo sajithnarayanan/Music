@@ -16,7 +16,7 @@ const Folder = ({navigation}) => {
             <Icon name="folder-open" size={35} style={{top:"9.5%",left:"3%"}} onPress={()=>navigation.navigate('Audio')}/>
             <Text style={{left:"20%",top:50}}>audio</Text>
             <Text style={{left:"75%",top:35}}>10 song</Text>
-            <Icon1 name="dots-three-vertical" size={25} style={{left:"90%",top:"12%"}} />
+            <Icon1 name="dots-three-vertical" size={25} style={{left:"90%",top:"1.5%"}} />
             <Icon name="folder-open" size={35} style={{top:50,left:10}} onPress={()=>navigation.navigate('Music')}/>
             <Text style={{left:"20%",top:25}}>Download</Text>
             <Text style={{left:"75%",top:10}}>1 song</Text>
