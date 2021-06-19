@@ -1,17 +1,18 @@
 import React from 'react';
-import { View, Text,Button } from 'react-native';
+import { View, Text,Button,StyleSheet } from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import Icon from 'react-native-vector-icons/MaterialIcons'
 import Icon1 from 'react-native-vector-icons/Entypo';
 const Folder = ({navigation}) => {
     return (
-        <View style={{backgroundColor:"#C2E2EF",height:1000}}>
-            <View style={{height:30,marginBottom:-20}}>
-                <AntDesign name="arrowleft" size={25} style={{left:10,top:15}} onPress={()=>navigation.goBack()} />
-                <Text style={{fontWeight:"bold",left:55,top:-8,fontSize:15}}>Home</Text>
-                <AntDesign name="search1" size={22} style={{left:280,top:-25}}/>
+        <View style={styles.container}>
+            <View style={styles.main}>
+                <AntDesign name="arrowleft" size={25} style={styles.antdesign} onPress={()=>navigation.goBack()} />
+                <Text style={styles.home}>Home</Text>
+                <AntDesign name="search1" size={22} style={styles.antdesign1}/>
                 <Icon1 name="dots-three-vertical" size={20} style={{left:325,top:-45}}/>
             </View>
+            <View style={styles.content}>
             <Icon name="folder-open" size={35} style={{top:75,left:10}} onPress={()=>navigation.navigate('Audio')}/>
             <Text style={{left:56,top:50}}>audio</Text>
             <Text style={{left:250,top:35}}>10 song</Text>
@@ -32,9 +33,35 @@ const Folder = ({navigation}) => {
             <Text style={{left:56,top:-67}}>Whatsapp Audio</Text>
             <Text style={{left:243,top:-85}}>10 song</Text>
             <Icon1 name="dots-three-vertical" size={30} style={{right:-312,top:-110}} />
+            </View>
         </View>
 
         );
 }
-
+const styles=StyleSheet.create({
+container:{
+    backgroundColor:"#C2E2EF",
+    height:1000
+},
+main:{
+    marginTop:".1%"
+},
+content:{
+    height:"80%",
+    bottom:"8%"
+},
+antdesign:{
+    left:10,
+    top:15
+},
+home:{
+    fontWeight:"bold",
+    left:55,
+    top:-8,
+    fontSize:15
+},
+antdesign1:{
+    left:"70%"
+}
+})
 export default Folder;
