@@ -72,6 +72,7 @@ const HomeScreen = () => {
 }
 const styles=StyleSheet.create({
 container:{
+    height:"100%",
     flex:1,
     paddingTop:"10%",
     backgroundColor:"skyblue",
