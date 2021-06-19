@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text,Image, StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import { useNavigation } from '@react-navigation/native';
+import normalize from 'react-native-normalize';
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -90,7 +91,7 @@ icon2:{
 first:{
     flexDirection:"row",
     height:700,
-    bottom:"25%",
+    bottom:"30%",
 },
 library:{
     backgroundColor:"#BFE7F2",
@@ -126,7 +127,7 @@ favorite:{
 two:{
     flexDirection:"row",
     height:700,
-    bottom:"200%",
+    bottom:normalize(650 ,'height')
     
 },
 play:{
