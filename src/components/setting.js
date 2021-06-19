@@ -81,7 +81,7 @@ const Setting = ({navigation}) => {
         value={first}
       />
         <Text style={{left:20,top:23}}>Click tracks add to current que</Text>
-            <Text style={{left:20,top:23,fontSize:13}}>Click one song will only add the song into current {"\n"} que, will not add/change other songs in current {'\n'}que.</Text>
+            <Text style={{left:20,top:23,fontSize:13}}>Click one song will only add the song into current{"\n"}que, will not add/change other songs in current{'\n'}que.</Text>
             <Switch
         trackColor={{ false: "#767577", true: "#81b0ff" }}
         thumbColor={two ? "#f5dd4b" : "#f4f3f4"}
@@ -100,7 +100,7 @@ const Setting = ({navigation}) => {
   <Text style={{top:10,left:20,fontSize:13}}>Choose 12/24h time format on lock screen page clock</Text>
   <TouchableOpacity><Icon name="arrow-right" size={35} style={{left:"90%",bottom:"96%"}} /></TouchableOpacity>
   <Text style={{left:"8%",top:"1%"}}>Smart playlist track limit</Text>
-  <Text style={{left:"6%",top:10,fontSize:13}}>Set the limit number for the Recent play& Recent {"\n"} add& Most play</Text>
+  <Text style={{left:"6%",top:10,fontSize:13}}>Set the limit number for the Recent play& Recent{"\n"}add& Most play</Text>
   <Text style={{left:350,top:-40}}> No limit</Text>
   <View style={{height:100}}>
     <Text style={{color:"yellow",paddingLeft:20,marginTop:10,backgroundColor: "#9BD3E9",}}>Headset Settings</Text>
