@@ -11,7 +11,7 @@ const HomeScreen = () => {
         <View style={styles.container}>
             <View style={styles.one}>
         <Icon name="menu" size={30} style={{top:"2%"}} onPress={() => navigation.openDrawer()}/>
-        <Text style={{left:"12%",bottom:"21%",fontWeight:"bold"}}>Music Player</Text>
+        <Text style={{left:"12%",bottom:"70%",fontWeight:"bold"}}>Music Player</Text>
         <Icon name="search" size={30} style={styles.icon1} onPress={() => navigation.navigation('Settings')}/>
         <Icon name="card-giftcard" size={25} style={styles.icon2}  onPress={() => navigation.navigate('Ads')}/>
             </View>
@@ -65,7 +65,7 @@ const HomeScreen = () => {
             <Text style={{top:"10%"}}>Change Song by swap</Text>
             <Icon name="play-arrow" size={30} style={{top:"5%",left:"70%"}}/>
             <Icon name="fast-forward" size={30} style={{top:"5%",left:"90%"}}/>
-            <Icon name="snippet-folder" size={30}style={{top:"5%",left:"145%"}} />
+            <Icon name="snippet-folder" size={30}style={{top:"5%",left:"130%"}} />
             </View>
                   </View>
     );
@@ -78,15 +78,17 @@ container:{
     backgroundColor:"skyblue",
 },
 one:{
-    left:"2%",
-    bottom:"5%"
+    bottom:"5%",
+    backgroundColor:"#0890B6",
+    height:"5%",
+    marginBottom:"20%"
 },
 icon1:{
     left:"85%",
-    bottom:"41%"
+bottom:"120%",
 },
 icon2:{
-    bottom:"69%",
+    bottom:"200%",
     left:"75%"
 },
 first:{
