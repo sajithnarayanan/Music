@@ -10,7 +10,7 @@ const HomeScreen = () => {
     return (
         <View style={styles.container}>
                     <View style={styles.header}>
-        <Icon name="menu" size={30} style={{top:"2%",color:'white',left:'5%'}} onPress={() => navigation.openDrawer()}/>
+        <Icon name="menu" size={30} style={{top:"10%",color:'white',left:'5%'}} onPress={() => navigation.openDrawer()}/>
         <Text style={{ left:"22%",
     bottom:"70%",
     fontWeight:"bold",
@@ -29,25 +29,30 @@ const HomeScreen = () => {
             </View>
             <View style={styles.folder}>
         <Icon name="folder" size={30} style={{left:"32%",top:"15%"}}  onPress={() => navigation.navigate('Folder')} />
-        <Text style={{left:"22%",top:'20%',}}>FOLDER</Text>
+        <Text style={{left:"22%",top:'20%',
+    color:'white'}}>FOLDER</Text>
             </View>
             <View style={styles.favorite}>
         <Icon name="favorite-outline" size={30} style={{left:"35%",top:"15%"}}onPress={() => navigation.navigate('Favorite')}/>
-        <Text style={{left:"20%",top:'20%',}}>FAVORITE</Text>
+        <Text style={{left:"20%",top:'20%',
+    color:'white'}}>FAVORITE</Text>
             </View>
             </View>
             <View style={styles.two}>
                 <View style={styles.play}>
                 <Icon name="anchor" size={30} style={{left:"35%",top:"15%"}} onPress={() => navigation.navigate('Recent Play')}/>
-            <Text style={{left:"10%",top:'20%',}}>RECENT PLAY</Text>
+            <Text style={{left:"8%",top:'20%',
+    color:'white',alignContent:"center"}}>RECENT PLAY</Text>
                 </View>
                 <View style={styles.add}>
                 <Icon name="sync" size={30} style={{left:"35%",top:"15%"}}onPress={() => navigation.navigate('Recent add')}/>
-            <Text style={{left:"10%",top:'20%',}}>RECENT ADD</Text>
+            <Text style={{left:"10%",top:'20%',
+    color:'white',alignContent:"center"}}>RECENT ADD</Text>
                 </View>
                 <View style={styles.most}>
                 <Icon name="favorite-outline" size={30} style={{left:"35%",top:"15%"}}onPress={() => navigation.navigate('Most Play')}/>
-            <Text style={{left:"10%",top:'20%',}}>MOST PLAY</Text>
+            <Text style={{left:"10%",top:'20%',
+    color:'white',alignContent:"center"}}>MOST PLAY</Text>
                 </View>
             </View>
             </View>
@@ -58,8 +63,10 @@ const HomeScreen = () => {
             </View>
             <View style={styles.three}>
             <View style={styles.list}>
-        <Icon name="music-note" size={30} style={{left:"35%"}}/>
-        <Text style={{left:"20%"}}>Default List</Text>
+        <Icon name="music-note" size={30} style={{left:"35%",top:"10%"}}/>
+        <Icon name="view-carousel" size={25} style={{left:"25%",bottom:"25%"}}/>
+        <Text style={{left:"20%",bottom:"25%",
+    color:'white'}}>Default List</Text>
             </View>
             <View style={styles.plus}>
         <Icon name="add" size={30} style={{left:"30%"}}onPress={() => navigation.navigate('ModalStack')}/>
@@ -68,7 +75,8 @@ const HomeScreen = () => {
         <Icon name="shuffle" size={30} style={{left:"85%",bottom:"43%",color:'white'}} onPress={()=>navigation.navigate('Library')}/>
                     <View style={styles.player}>
             <Icon name="music-note" size={30} style={{top:"5%"}}/>
-            <Text style={{top:"10%"}}>Change Song by swap</Text>
+            <Text style={{top:"7%",
+    color:'white'}}>Change Song by swap</Text>
             <Icon name="play-arrow" size={30} style={{top:"5%",left:"70%"}}/>
             <Icon name="fast-forward" size={30} style={{top:"5%",left:"90%"}}/>
             <Icon name="snippet-folder" size={30}style={{top:"5%",left:"130%"}} />
@@ -81,7 +89,8 @@ container:{
     height:"100%",
     flex:1,
     paddingTop:"10%",
-    backgroundColor:"skyblue",
+    backgroundColor:"#0890B6",
+    opacity:0.7
 },
 header:{
     bottom:"5%",
