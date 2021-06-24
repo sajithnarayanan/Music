@@ -20,6 +20,8 @@ import two from '../components/equalizer';
 import three from '../components/drive';
 import four from '../components/hidden';
 import five from '../screens/Folder/Whatsapp';
+import six from '../screens/Most play/index';
+import seven from '../navigation/themes';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 const Stack = createStackNavigator();
 
@@ -47,6 +49,8 @@ const HomeStack =({navigation}) => {
       <Stack.Screen name="Drive" component={three} />
       <Stack.Screen name="Hidden" component={four} />
       <Stack.Screen name="Whatsapp" component={five} />
+      <Stack.Screen name="Play" component={six} />
+      <Stack.Screen name="Themes" component={seven} />
 
     </Stack.Navigator>
   );
