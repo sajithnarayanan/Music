@@ -16,6 +16,7 @@ import Scan from '../components/scan';
 import Equalizer from '../components/equalizer';
 import Drive from '../components/drive';
 import Hidden from '../components/hidden';
+import Themes from './themes';
 const Drawer = createDrawerNavigator();
 
 // const HomeStackScreen = ({navigation})=>(
@@ -52,7 +53,7 @@ const Main = ({ navigation }) => {
                     <Icon.Button name="menu-fold" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
                 )
             }} />
-            <Drawer.Screen name="Theme" component={HomeScreen} options={{
+            <Drawer.Screen name="Theme" component={Themes} options={{
                 headerLeft: () => (
                     <Icon.Button name="search2" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
                 )

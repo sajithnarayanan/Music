@@ -12,7 +12,7 @@ const HomeScreen = () => {
                     <View style={styles.header}>
         <Icon name="menu" size={30} style={{top:"10%",color:'white',left:'5%'}} onPress={() => navigation.openDrawer()}/>
         <Text style={{ left:"22%",
-    bottom:"70%",
+    bottom:"60%",
     fontWeight:"bold",
     fontSize:20,
     color:'white'}}>Music Player</Text>
@@ -100,10 +100,10 @@ header:{
 },
 icon1:{
     left:"85%",
-bottom:"150%",
+bottom:"135%",
 },
 icon2:{
-    bottom:"225%",
+    bottom:"210%",
     left:"75%"
 },
 first:{
