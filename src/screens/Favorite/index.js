@@ -28,11 +28,14 @@ main:{
 backgroundColor:"#0890B6",
 height:"5%",
 justifyContent:"flex-start",
-alignItems:"stretch"
+alignItems:"flex-start",
+
 },
-icon1:{
+icon:{
     left:"5%",
-    top:"25.5%"
+    top:"25.5%",
+    alignSelf:"auto",
+    alignItems:"center"
 },
 text:{
     left:"15%",

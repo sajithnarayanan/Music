@@ -1,231 +1,282 @@
 import React from 'react';
-import { View, Text,Image, StyleSheet } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Pressable,StyleSheet } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import Iconf from 'react-native-vector-icons/Foundation';
 import { useNavigation } from '@react-navigation/native';
-// import normalize from 'react-native-normalize';
 
 const HomeScreen = () => {
     const navigation = useNavigation();
-   
     return (
         <View style={styles.container}>
-                    <View style={styles.header}>
-        <Icon name="menu" size={30} style={{top:"10%",color:'white',left:'5%'}} onPress={() => navigation.openDrawer()}/>
-        <Text style={{ left:"22%",
-    bottom:"60%",
-    fontWeight:"bold",
-    fontSize:20,
-    color:'white'}}>Music Player</Text>
-        <Icon name="search" size={30} style={styles.icon1} onPress={() => navigation.navigation('Settings')}/>
-        <Icon name="card-giftcard" size={25} style={styles.icon2}  onPress={() => navigation.navigate('Ads')}/>
-            </View>
-            <View style={{flexDirection:"column",flex: 1,}}>
-            <View style={styles.first}>
-            <View style={styles.library}>
-                <Icon name="music-note" size={30} style={{left:"34%",top:"15%"}} onPress={() => navigation.navigate('Library')}/>
-                <Text style={{  textAlign:'center',
-    top:'20%',
-    color:'white'}}>LIBRARY</Text>
-            </View>
-            <View style={styles.folder}>
-        <Icon name="folder" size={30} style={{left:"32%",top:"15%"}}  onPress={() => navigation.navigate('Folder')} />
-        <Text style={{left:"22%",top:'20%',
-    color:'white'}}>FOLDER</Text>
-            </View>
-            <View style={styles.favorite}>
-        <Icon name="favorite-outline" size={30} style={{left:"35%",top:"15%"}}onPress={() => navigation.navigate('Favorite')}/>
-        <Text style={{left:"20%",top:'20%',
-    color:'white'}}>FAVORITE</Text>
-            </View>
-            </View>
-            <View style={styles.two}>
-                <View style={styles.play}>
-                <Icon name="anchor" size={30} style={{left:"35%",top:"15%"}} onPress={() => navigation.navigate('Recent Play')}/>
-            <Text style={{left:"8%",top:'20%',
-    color:'white',alignContent:"center"}}>RECENT PLAY</Text>
+  <View style={styles.menubar}>
+                <Icon name="menu" size={30} color="#fff"  style={{width:"10%",}} onPress={() => navigation.openDrawer()} />
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Music Player</Text>
+<View style={{height:"100%",width:"40%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
+                <Icon name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                <Icon name="search" size={30} color="#fff" onPress={() => navigation.navigation('Settings')} />
                 </View>
-                <View style={styles.add}>
-                <Icon name="sync" size={30} style={{left:"35%",top:"15%"}}onPress={() => navigation.navigate('Recent add')}/>
-            <Text style={{left:"10%",top:'20%',
-    color:'white',alignContent:"center"}}>RECENT ADD</Text>
-                </View>
-                <View style={styles.most}>
-                <Icon name="favorite-outline" size={30} style={{left:"35%",top:"15%"}}onPress={() => navigation.navigate('Most Play')}/>
-            <Text style={{left:"10%",top:'20%',
-    color:'white',alignContent:"center"}}>MOST PLAY</Text>
                 </View>
             </View>
-            </View>
-            <View style={styles.playlist}>
-            <Text style={{top:"3.5%",color:"#fff",fontWeight:"bold",left:"29%"}}>PLAYLIST(2)</Text>
-            <Icon name="add" size={20} style={styles.icon4} onPress={() => navigation.navigate('Most Play')}  />
-            <Icon name="arrow-right" size={20} style={styles.icon5} onPress={()=>navigation.navigate('ModalStack')}/> 
-            </View>
-            <View style={styles.three}>
-            <View style={styles.list}>
-        <Icon name="music-note" size={30} style={{left:"35%",top:"10%"}}/>
-        <Icon name="view-carousel" size={25} style={{left:"25%",bottom:"25%"}}/>
-        <Text style={{left:"20%",bottom:"25%",
-    color:'white'}}>Default List</Text>
-            </View>
-            <View style={styles.plus}>
-        <Icon name="add" size={30} style={{left:"30%"}}onPress={() => navigation.navigate('ModalStack')}/>
+<View style={styles.Tiles}>
+    </View>
+    <View style={styles.row1}>
+    <TouchableOpacity style={styles.Tile1} >
+        <View style={styles.InnerTilesBox}>
+        <Iconf name="music" size={40} color="#fff" onPress={() => navigation.navigate('Library')}/>
+<Text style={styles.TilesText}>
+    LIBRARY
+</Text>
         </View>
-            </View>
-        <Icon name="shuffle" size={30} style={{left:"85%",bottom:"43%",color:'white'}} onPress={()=>navigation.navigate('Library')}/>
-                    <View style={styles.player}>
-            <Icon name="music-note" size={30} style={{top:"5%"}}/>
-            <Text style={{top:"7%",
-    color:'white'}}>Change Song by swap</Text>
-            <Icon name="play-arrow" size={30} style={{top:"5%",left:"70%"}}/>
-            <Icon name="fast-forward" size={30} style={{top:"5%",left:"90%"}}/>
-            <Icon name="snippet-folder" size={30}style={{top:"5%",left:"130%"}} />
-            </View>
-                  </View>
+    </TouchableOpacity>
+    <TouchableOpacity  style={styles.Tile2} >
+    <View style={styles.InnerTilesBox}>
+    <Icon name="folder" size={40} color="#fff"  onPress={() => navigation.navigate('Folder')}/>
+<Text style={styles.TilesText}>
+    FOLDER
+</Text>
+        </View>
+    </TouchableOpacity >
+    <TouchableOpacity  style={styles.Tile3} >
+    <View style={styles.InnerTilesBox}>
+    <Icon name="favorite-outline" size={40}  color="#fff" onPress={() => navigation.navigate('Favorite')}/>
+<Text style={styles.TilesText}>
+    FAVOURITE
+</Text>
+        </View>
+    </TouchableOpacity >
+    </View>
+    <View style={styles.row2}>
+    <TouchableOpacity  style={styles.Tile4} >
+    <View style={styles.InnerTilesBox}>
+    <Icon name="anchor" size={40} color="#fff" onPress={() => navigation.navigate('Recent Play')}/>
+<Text style={styles.TilesText}>
+    RECENT PLAY
+</Text>
+        </View>
+    </TouchableOpacity >
+    <TouchableOpacity  style={styles.Tile5}>
+    <View style={styles.InnerTilesBox}>
+    <Icon name="sync" size={40} color="#fff" onPress={() => navigation.navigate('Recent add')}/>
+<Text style={styles.TilesText}>
+    RECENT ADD
+</Text>
+        </View>
+    </TouchableOpacity >
+    <TouchableOpacity  style={styles.Tile6} >
+    <View style={styles.InnerTilesBox}>
+    <Icon name="favorite-outline" size={40} color="#fff" onPress={() => navigation.navigate('Most Play')}/>
+<Text style={styles.TilesText}>
+    MOST PLAY
+</Text>
+        </View>
+    </TouchableOpacity >
+    </View>
+    <View style={styles.playlistView}> 
+    <View style={styles.leftbox}> 
+    <Text style={{fontWeight:"bold",color:"#fff",fontSize:20 }}>
+        PLAYLIST (1)
+    </Text>
+     </View>
+<View style={styles.rightbox}>
+<Icon name='add' size={30} style={{color:"#fff"}} onPress={() => navigation.navigate('Most Play')} />
+<Icon name='arrow-right' size={30} style={{color:"#fff",marginLeft:"2%"}}  onPress={()=>navigation.navigate('ModalStack')} />
+     </View>
+ </View>
+ <View style={styles.row3}> 
+ <TouchableOpacity style={styles.Tile4} >
+        <View style={styles.InnerTilesBox}>
+        <Icon name="menu" size={30} color="white"  />
+<Text style={styles.TilesText}>
+    DEFAULT LIST
+</Text>
+        </View>
+    </TouchableOpacity >
+    <TouchableOpacity  style={styles.Tile4} >
+    <View style={styles.InnerTilesBox}>
+    <Icon name="add" size={60}  color="white" onPress={() => navigation.navigate('ModalStack')}/>
+        </View>
+    </TouchableOpacity >
+    <View style={styles.TileEmpty}>
+    </View>
+ </View>
+ <View style={styles.row4}>
+     <View style={{width:65,height:65,backgroundColor:"#f4ce5e",justifyContent:"center",alignItems:"center",borderRadius:50}}>
+     <Icon name="shuffle"size={30} color="#fff" onPress={()=>navigation.navigate('Library')}/>
+     </View>
+      </View>
+ <View style={styles.PlayerView}>
+ <View style={styles.Player}>
+ <Iconf name="music"size={30} color="#fff" />
+ <Text style={{color:"#fff",fontSize:15}}>03-uyire.mp3</Text>
+ <Icon name="play-arrow" size={30} color="#fff"/>
+ <Icon name="fast-forward" size={30} color="#fff"/>
+            <Icon name="queue-music" size={30} color="#fff"/>
+     </View>
+ </View>
+        </View>
     );
 }
-const styles=StyleSheet.create({
-container:{
-    height:"100%",
-    flex:1,
-    paddingTop:"10%",
-    backgroundColor:"#0890B6",
-    opacity:0.7
+const styles = StyleSheet.create({
+container: {
+height:"100%",
+flex:1,
+width:"100%",
+//flexWrap:"wrap"
 },
-header:{
-    bottom:"5%",
-    backgroundColor:"#0890B6",
-    height:"5%",
-    marginBottom:"20%"
-},
-icon1:{
-    left:"85%",
-bottom:"135%",
-},
-icon2:{
-    bottom:"210%",
-    left:"75%"
-},
-first:{
-    flexDirection:"row",
-    height:700,
-    bottom:"30%",
-},
-library:{
-    backgroundColor:"#BFE7F2",
-    height:"11%",
-    width:"28%",
-    left:"2%",
-    top:"5%",
-    // paddingLeft:"5%",
-    // paddingTop:"5%",
-},
-icon3:{
-    left:"15%"
-},
-folder:{
-    backgroundColor:"#F5910B",
-    height:"11%",
-    left:"4%",
-    top:"5%",
-    width:"28%",
-    // paddingVertical:"5%",
-    // paddingHorizontal:"5%",
-},
-favorite:{
-    backgroundColor:"#DA98B8",
-    width:"28%",
-    height:"11%",
-    // paddingVertical:"5%",
-    // paddingHorizontal:"3%",
-    left:"6%",
-    top:"5%",
-},
-two:{
-    flexDirection:"row",
-    height:700,
-    bottom:'208%',
-    // bottom:normalize(660 ,'height')
-    
-},
-play:{
-    backgroundColor:"#98D0DA",
-    width:"28%",
-    height:"11%",
-    // paddingVertical:"5%",
-    // paddingHorizontal:"3%",
-    left:"2%",
-    top:"15%"
-},
-add:{
-    backgroundColor:"#8CDB76",
-    width:"28%",
-    height:"11%",
-    alignContent:"center",
-    // paddingVertical:"5%",
-    // paddingHorizontal:"3%",
-    left:"4%",
-    top:"15%"
-},
-most:{
-    backgroundColor:"#CC82EC",
-    width:"28%",
-    height:"11%",
-    // paddingVertical:"5%",
-    // paddingHorizontal:"3%",
-    left:"6%",
-    top:"15%"
-},
-playlist:{
-    flexDirection: 'row',
-    backgroundColor:"#0890B6",
-    // paddingLeft:"5%",
-    // marginHorizontal:"4%",
-    // marginVertical:"50%",
-    // marginTop:"50%",
-    height:"6%",
-    elevation:0,
-    top:'55%'    
-},
-icon4:{
-    marginLeft:"58%",
-    top:"3%",
-    justifyContent:'flex-end'
-},
-icon5:{
-    marginLeft:"5%",
-    top:"3%"
-},
-three:{
-    flexDirection: 'row',
-    height:700,
-    bottom:"59%",
-},
-list:{
-    backgroundColor: "#98D0DA",
-    width: "28%",
-    height: "11%",
-    left: "2%",
-    justifyContent: "center" ,
-    top:"120%"
-},
-plus:{
-    backgroundColor: "#98D0DA",
-    width: "28%",
-     height: "11%",
-       left: "6%",
-       justifyContent: "center" ,
-    //    paddingLeft:"10%",
-       top:"120%"
-},
-player:{
-    flexDirection: 'row',
+menubar:{
     height:"8%",
-    borderWidth:2,
-    borderColor:"grey",
-    borderRadius:20,
-    bottom:"75%",
-}
-
-});
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-between",
+    alignItems:"center",
+   // paddingTop:"5%",
+    backgroundColor: '#376f8aef'
+},
+Tiles:{
+flexDirection:"column",
+//backgroundColor:"#76b5c5",
+justifyContent:"center",
+},
+row1:{
+    height:"15%",
+   width:"100%",
+   backgroundColor:"#376f8aba",
+   //backgroundColor:"skyblue",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    justifyContent:"space-around",
+    alignContent:"space-around",
+},
+row2:{
+    height:"15%",
+   backgroundColor:"#376f8aba",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    justifyContent:"space-around",
+    alignContent:"space-around",
+},
+Tile1:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#4691e4",
+},
+Tile2:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#d49369"
+},
+Tile3:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#d49198"
+},
+Tile4:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#6fb2dc"
+},
+Tile5:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#0dc89b"
+},
+Tile6:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"#ab8fdc"
+},
+TileEmpty:{
+    width:"30%",
+    height:"80%",
+    justifyContent:"center",
+    alignItems:"center",
+},
+InnerTilesBox:{
+    alignItems:"center",
+    justifyContent:"center",
+    alignContent:"center"
+},
+TilesText:{
+    marginTop:"5%",
+    color:"#fff",
+    fontWeight:'bold',
+},
+playlistView:{
+    height:"8%",
+    width:"100%",
+    flexDirection:"row",
+    alignContent:"center",
+    justifyContent:"space-between",
+    flexWrap:"wrap",
+    backgroundColor: '#376f8aea',
+},
+leftbox:{
+    height:"100%",
+    width:"50%",
+    justifyContent:"center",
+    alignContent:"center",
+    alignItems:"flex-start",
+    paddingLeft:"5%"
+},
+rightbox:{
+ 
+   height:"100%",
+   width:"20%",
+justifyContent:"center",
+    alignContent:"center",
+    alignItems:"center",
+    justifyContent:"space-between",
+    flexDirection:"row",
+},
+row3:{
+    height:"15%",
+   width:"100%",
+   backgroundColor:"#376f8aba",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    justifyContent:"space-around",
+    alignContent:"space-around",
+},
+row4:{
+    height:"28%",
+    width:"100%",
+    flexDirection:"row",
+    backgroundColor:"#376f8aba",
+    justifyContent:"flex-end",
+    alignItems:"flex-end",
+    alignContent:"flex-end",
+    paddingRight:"3%"
+},
+PlayerView:{ 
+    width:"100%",
+    height:"12%",
+    backgroundColor: '#376f8aea',
+    justifyContent:"center",
+    alignContent:"center",
+    alignItems:"center",
+},
+Player:{
+height:"80%",
+width:"95%",
+//borderRadius:25,
+    justifyContent:"space-around",
+    alignContent:"space-around",
+   alignItems:"center",
+   flexDirection:"row",
+},
+    });
 export default HomeScreen;
