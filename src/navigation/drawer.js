@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { View, Text } from 'react-native';
 
 import { createDrawerNavigator } from '@react-navigation/drawer';
@@ -17,6 +17,8 @@ import Equalizer from '../components/equalizer';
 import Drive from '../components/drive';
 import Hidden from '../components/hidden';
 import Themes from './themes';
+import Timer from '../components/timer';
+import Widget from '../components/widget';
 const Drawer = createDrawerNavigator();
 
 // const HomeStackScreen = ({navigation})=>(
@@ -30,6 +32,11 @@ const Drawer = createDrawerNavigator();
 
 
 const Main = ({ navigation }) => {
+    const[main,Setmain]=useState('Shuffle');
+    const clickHandler=() =>{
+        Setmain('Order');
+
+    }
     return (
 
         <Drawer.Navigator initialRouteName=""  headerMode={false}>
@@ -50,20 +57,20 @@ const Main = ({ navigation }) => {
             }} />
             <Drawer.Screen name="Shuffle" component={HomeScreen} options={{
                 headerLeft: () => (
-                    <Icon.Button name="menu-fold" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
+                        onPress={clickHandler}
+                        )
             }} />
             <Drawer.Screen name="Theme" component={Themes} options={{
                 headerLeft: () => (
                     <Icon.Button name="search2" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
                 )
             }} />
-            <Drawer.Screen name="Widget" component={HomeScreen} options={{
+            <Drawer.Screen name="Widget" component={Widget} options={{
                 headerLeft: () => (
                     <Icon.Button name="youtube" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
                 )
             }} />
-            <Drawer.Screen name="Sleep Timer" component={HomeScreen} options={{
+            <Drawer.Screen name="Sleep Timer" component={Timer} options={{
                 headerLeft: () => (
                     <Icon.Button name="youtube" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
                 )

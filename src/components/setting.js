@@ -101,7 +101,7 @@ const Setting = ({navigation}) => {
   <TouchableOpacity><Icon name="arrow-right" size={35} style={{left:"90%",bottom:"96%"}} /></TouchableOpacity>
   <Text style={{left:"5%",top:"1%"}}>Smart playlist track limit</Text>
   <Text style={{left:"5%",top:10,fontSize:13}}>Set the limit number for the Recent play& Recent{"\n"}add& Most play</Text>
-  <Text style={{left:300,top:-40}}> No limit</Text>
+  <Text style={{left:"85%",top:-40}}> No limit</Text>
   <View style={{height:100}}>
     <Text style={{color:"yellow",paddingLeft:20,marginTop:10,backgroundColor: "#9BD3E9",}}>Headset Settings</Text>
   </View>
