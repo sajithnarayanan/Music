@@ -39,7 +39,7 @@ const Themes = ({navigation}) => {
          </View>
       <View style={styles.three}>
         <Image 
-        style={{left:"4%",bottom:"30%",height:"40%",width:"30%"}}
+        style={{left:"4%",bottom:"30%",height:"40%",width:"30%",justifyContent:"flex-start"}}
         source={require('../assets/themes/main.jpg')} />
         <Image 
         style={{left:"36%",bottom:"70%",height:"40%",width:"30%"}}
@@ -62,7 +62,6 @@ const styles=StyleSheet.create({
     paddingTop:"10%",
     backgroundColor:"#0890B6",
     opacity:0.7,
-    marginVertical:"1%"
 
   },
    header:{
@@ -85,14 +84,13 @@ const styles=StyleSheet.create({
     alignContent:"flex-start",
     alignSelf:"auto",
     left:"1%",
-    top:"9%",
-    marginVertical:"1%"
-
+    top:"1%",
+    marginBottom:"1%"
      },
    three:{
     height:500,
     right:".7%",
-    bottom:"30%",
+    bottom:"32%",
     marginVertical:"1%"
 
    }

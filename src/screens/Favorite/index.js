@@ -31,8 +31,8 @@ justifyContent:"flex-start",
 alignItems:"flex-start",
 
 },
-icon:{
-    left:"5%",
+icon1:{
+    left:"3%",
     top:"25.5%",
     alignSelf:"auto",
     alignItems:"center"
@@ -55,7 +55,7 @@ icon3:{
     bottom:"237.5%",
 },
 music:{
-    left:"45%",
+    left:"42%",
     top:"30%"
 },
 text2:{
@@ -69,7 +69,7 @@ toucable:{
     top:"35%",
     borderWidth:1,
     borderColor:"#fff",
-    paddingLeft:18
+    paddingLeft:24
 }
 
 
