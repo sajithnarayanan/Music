@@ -6,7 +6,7 @@ const Folder = ({navigation}) => {
     return (
         <View style={styles.container}>
            <View style={styles.header}>
-           <AntDesign name="arrowleft" size={25}  style={{top:"12%"}} onPress={()=>navigation.goBack()}/>
+           <AntDesign name="arrowleft" size={25}  style={{top:"10%"}} onPress={()=>navigation.goBack()}/>
             <Text style={styles.text}>FOLDER</Text>
             <AntDesign name="search1" size={25} style={styles.icon}/>
             <Icon1 name="dots-three-vertical" size={20} style={styles.Icon1} />
@@ -48,7 +48,9 @@ const styles = StyleSheet.create({
     },
     header:{
         backgroundColor:"#0890B6",
-        height:"5%"
+        height:"5%",
+        alignSelf:"auto",
+        alignItems:"baseline",
     },
     text:{
         left:"10%",
