@@ -9,7 +9,9 @@ import {
   ScrollView,
 } from 'react-native';
 import {RadioButton} from 'react-native-paper';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialIcons';
+import IconE from 'react-native-vector-icons/Entypo';
+//import Iconf from 'react-native-vector-icons/FontAwesome';
 const Timer = ({navigation}) => {
   const [checked, setChecked] = React.useState('first');
   const [isEnabled, setIsEnabled] = useState(false);
@@ -20,33 +22,16 @@ const Timer = ({navigation}) => {
         source={require('../assets/sleeptimerBg.jpg')}
         style={{position: 'absolute', width: '100%', height: '100%'}}
       />
-      <View
-        style={{
-          flexDirection: 'row',
-          paddingTop: '5%',
-          paddingBottom: '3%',
-          alignContent: 'space-between',
-          flexWrap: 'wrap',
-          backgroundColor: '#376f8aff',
-        }}>
-        <Icon
-          name="arrow-left"
-          size={25}
-          style={{left: '5%', top: '1%', color: '#fff'}}
-          onPress={() => navigation.goBack()}
-        />
-        <Text
-          style={{
-            left: 40,
-            fontWeight: 'bold',
-            fontSize: 20,
-            top: '1%',
-            width: '50%',
-            color: '#fff',
-          }}>
-          Sleep Timer
-        </Text>
-      </View>
+     
+     <View style={styles.menubar}>
+     <IconE name="arrow-left" size={25} style={{left: '5%', top: '1%', color: '#fff'}} onPress={() => navigation.goBack()}/>
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Sleep Timer</Text>
+<View style={{height:"100%",width:"40%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
+               
+                </View>
+                </View>
+            </View>
       <ScrollView style={{backgroundColor: '#376f8add', height: '100%'}}>
         <View style={styles.container}>
           <Text style={styles.TextStyle}>Close Sleep Mode</Text>
@@ -89,7 +74,7 @@ const Timer = ({navigation}) => {
           />
         </View>
         <View style={styles.container}>
-          <Text style={styles.TextStyle}>30 Mins</Text>
+          <Text style={styles.TextStyle}>60 Mins</Text>
           <RadioButton
             value="fifth"
             status={checked === 'fifth' ? 'checked' : 'unchecked'}
@@ -99,7 +84,7 @@ const Timer = ({navigation}) => {
           />
         </View>
         <View style={styles.container}>
-          <Text style={styles.TextStyle}>60 Mins</Text>
+          <Text style={styles.TextStyle}>90 Mins</Text>
           <RadioButton
             value="sixth"
             status={checked === 'sixth' ? 'checked' : 'unchecked'}
@@ -108,16 +93,7 @@ const Timer = ({navigation}) => {
             uncheckedColor={'#fff'}
           />
         </View>
-        <View style={styles.container}>
-          <Text style={styles.TextStyle}>90 Mins</Text>
-          <RadioButton
-            value="seventh"
-            status={checked === 'seventh' ? 'checked' : 'unchecked'}
-            onPress={() => setChecked('seventh')}
-            color={'#fff'}
-            uncheckedColor={'#fff'}
-          />
-        </View>
+      
         <View style={styles.container}>
           <View style={styles.inputContainer}>
             <Text style={styles.TextStyle}>Manual input</Text>
@@ -131,9 +107,9 @@ const Timer = ({navigation}) => {
           </View>
           <View style={{width: '35%', height: '100%', alignItems: 'flex-end'}}>
             <RadioButton
-              value="eighth"
-              status={checked === 'eighth' ? 'checked' : 'unchecked'}
-              onPress={() => setChecked('eighth')}
+              value="seventh"
+              status={checked === 'seventh' ? 'checked' : 'unchecked'}
+              onPress={() => setChecked('seventh')}
               color={'#fff'}
               uncheckedColor={'#fff'}
             />
@@ -165,14 +141,24 @@ const Timer = ({navigation}) => {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    paddingTop: '0.5%',
-    paddingBottom: '0.5%',
+    paddingTop: '0.8%',
+    paddingBottom: '0.8%',
     paddingLeft: '5%',
     flexDirection: 'row',
     alignItems: 'flex-start',
     justifyContent: 'space-between',
     backgroundColor: '#ffffff10',
   },
+  menubar:{
+    height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-between",
+    alignItems:"center",
+   // paddingTop:"5%",
+    backgroundColor: '#376f8aef'
+},
   inputContainer: {
     width: '65%',
     height: '100%',

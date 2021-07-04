@@ -15,18 +15,37 @@ import Icon from 'react-native-vector-icons/Entypo'; //3dots
 import Icon1 from 'react-native-vector-icons/AntDesign'; //playnext
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons'; //playlist-plus
 import Icon3 from 'react-native-vector-icons/FontAwesome';
+import IconM from 'react-native-vector-icons/MaterialIcons';
 const Tab = createMaterialTopTabNavigator();
 
 function MyTabs({navigation}) {
   const insets = useSafeAreaInsets();
   return (
+    <>
+   <View style={{  height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-between",
+    alignItems:"center",
+    backgroundColor: '#376f8aef'}}>
+               <Icon name="arrow-left" size={25} style={{left: '5%', top: '1%', color: '#fff'}} onPress={() => navigation.goBack()}/>
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Library</Text>
+<View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"30%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
+                <IconM name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                <IconM name="search" size={30} color="#fff"  />
+                </View>
+                </View>
+            </View>
+
 
     <Tab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
         activeTintColor: '#f4ce5e',
         labelStyle: {fontSize: 12},
-        style: {backgroundColor: '#376f8a'},
+        style: {backgroundColor: '#376f8aef'},
       }}>
       <Tab.Screen
         name="Tracks"
@@ -49,7 +68,7 @@ function MyTabs({navigation}) {
         options={{tabBarLabels: 'Genres'}}
       />
     </Tab.Navigator>
-    
+    </>
   );
 }
 export default MyTabs;
@@ -65,22 +84,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-start',
   },
+  fileNameView: {
+    marginLeft: '4%',
+    marginTop:"2%",
+    flexDirection: 'column',
+  },
   fileName: {
     color: 'white',
     marginTop: '2.5%',
     marginBottom: '2.5%',
-    paddingLeft: '1%',
-    fontSize: 20,
+    fontSize: 18,
   },
   fileName2: {
     fontSize: 15,
-    paddingBottom: '1%',
-    paddingLeft: '1%',
     color: 'white',
-  },
-  fileNameView: {
-    marginLeft: '3%',
-    flexDirection: 'column',
   },
   audioImage: {
     height: 50,
@@ -132,7 +149,6 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignContent:"space-between",
     margin: '1%',
-   // marginTop:"7%",
    borderWidth:1,
    borderColor:"transparent",
 
@@ -864,7 +880,7 @@ function Albums() {
           />
           <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Ambili</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon
@@ -885,7 +901,7 @@ function Albums() {
           />
           <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Ishq</Text>
-            <Text style={styles.fileName2}> 3 songs</Text>
+            <Text style={styles.fileName2}>3 songs</Text>
           </View>
 
           <Icon
@@ -907,7 +923,7 @@ function Albums() {
           />
         <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Luca</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon
@@ -929,7 +945,7 @@ function Albums() {
           />
          <View style={styles.fileNameView}>
             <Text style={styles.fileName}>9 Movie</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon
@@ -951,7 +967,7 @@ function Albums() {
           />
          <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Ezra</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon
@@ -973,7 +989,7 @@ function Albums() {
           />
          <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Godha</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon
@@ -994,7 +1010,7 @@ function Albums() {
           />
          <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Mayanadhi</Text>
-            <Text style={styles.fileName2}> 5 songs</Text>
+            <Text style={styles.fileName2}>5 songs</Text>
           </View>
 
           <Icon
@@ -1016,7 +1032,7 @@ function Albums() {
           />
           <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Kumbalangi Nights</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon
@@ -1038,7 +1054,7 @@ function Albums() {
           />
       <View style={styles.fileNameView}>
             <Text style={styles.fileName}>Guppy</Text>
-            <Text style={styles.fileName2}> 4 songs</Text>
+            <Text style={styles.fileName2}>4 songs</Text>
           </View>
 
           <Icon

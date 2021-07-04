@@ -45,16 +45,16 @@ text:{
     paddingVertical:"3%"
 },
 icon:{
-    bottom:"88.5%",
-    left: 150
+    bottom:"88%",
+    left: 190
 },
 icon2:{
-    bottom:"167.5%",
-     left:170
+    bottom:"167%",
+     left:210
 },
 icon3:{
-    left:190,
-   paddingVertical:"1.5%",
+    left:230,
+   paddingVertical:"1.2%",
 },
 music:{
     left:"42%",
