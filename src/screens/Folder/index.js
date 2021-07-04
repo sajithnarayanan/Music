@@ -6,12 +6,12 @@ const Folder = ({navigation}) => {
     return (
         <View style={styles.container}>
            <View style={styles.header}>
-           <AntDesign name="arrowleft" size={25}  style={{top:"10%"}} onPress={()=>navigation.goBack()}/>
+           <AntDesign name="arrowleft" size={25}  style={{top:"8%"}} onPress={()=>navigation.goBack()}/>
             <Text style={styles.text}>FOLDER</Text>
             <AntDesign name="search1" size={25} style={styles.icon}/>
             <Icon1 name="dots-three-vertical" size={20} style={styles.Icon1} />
            </View>
-           <View  style={{marginTop:"10%"}}>
+           <View  style={{marginTop:"5%"}}>
                <Icon1 name="folder" size={28} style={{left:"5%",top:"15%",backgroundColor:"grey",width:"10%",paddingLeft:"1.5%"}} onPress={()=>navigation.navigate('Recent')}/>
                <Text style={{left:"20%",bottom:"21%",fontSize:17}}>audio</Text>
                <Text style={{left:"20%",bottom:"25%"}}>/storage/emu...Xender/audio</Text>
@@ -47,24 +47,31 @@ const styles = StyleSheet.create({
         opacity:0.7
     },
     header:{
-        backgroundColor:"#0890B6",
+        flexDirection:"row",
+        backgroundColor: '#376f8aff',
         height:"5%",
-        alignSelf:"auto",
-        alignItems:"baseline",
+       alignContent:"space-between",
+       flexWrap: "wrap-reverse",
+       justifyContent:"flex-start",
+       alignItems:"flex-start",
+       paddingTop:"2%"
+
     },
     text:{
-        left:"10%",
-        bottom:"45%",
+        left:"25%",
+        bottom:"40%",
         fontWeight:"bold",
-        fontSize:15
+        fontSize:15,
+        textAlign:"left"
     },
     icon:{
-        left:"75%",
-        bottom:"100%"
+        marginLeft:"53%",
+        top:"1%",
+        left:"51%"
     },
    Icon1:{
-       left:"90%",
-       bottom:"160%"
+       left:"110%",
+       bottom:"170%"
    }
 })
 

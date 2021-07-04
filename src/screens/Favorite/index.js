@@ -27,32 +27,34 @@ container:{
 main:{
 backgroundColor:"#0890B6",
 height:"5%",
-justifyContent:"flex-start",
-alignItems:"flex-start",
+alignContent:"space-between",
+flexWrap:"wrap",
+flexDirection:"row",
+justifyContent:"flex-start"
 
 },
 icon1:{
     left:"3%",
-    top:"25.5%",
-    alignSelf:"auto",
-    alignItems:"center"
+   paddingVertical:"2%",
+    
 },
 text:{
-    left:"15%",
+    left:"27%",
     fontWeight:"bold",
-    bottom:"20%"
+    bottom:"15%",
+    paddingVertical:"3%"
 },
 icon:{
     bottom:"88.5%",
-    left: "80%"
+    left: 150
 },
 icon2:{
     bottom:"167.5%",
-     left: "68%"
+     left:170
 },
 icon3:{
-    left:"92%",
-    bottom:"237.5%",
+    left:190,
+   paddingVertical:"1.5%",
 },
 music:{
     left:"42%",
