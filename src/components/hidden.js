@@ -32,14 +32,14 @@ const Hidden = ({navigation}) => {
             <Icon
               name="arrow-left"
               size={25}
-              style={{left: '5%', bottom: '15%', color: '#fff'}}
+              style={{left: '5%', top: '1%', color: '#fff'}}
               onPress={() => setModalOpen(false)}
             />
             <Text
               style={{
                 left: 40,
                 fontWeight: 'bold',
-                fontSize: 18,
+                fontSize: 20,
                 top: '1%',
                 width: '50%',
                 color: '#fff',
@@ -144,6 +144,7 @@ const Hidden = ({navigation}) => {
             />
           </TouchableOpacity>
         </View>
+        
         <Icon1
           name="folder-open"
           size={60}

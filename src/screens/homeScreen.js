@@ -3,7 +3,6 @@ import { View, Text, Image, TouchableOpacity, Pressable,StyleSheet } from 'react
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Iconf from 'react-native-vector-icons/Foundation';
 import { useNavigation } from '@react-navigation/native';
-
 const HomeScreen = () => {
     const navigation = useNavigation();
     return (
@@ -12,7 +11,7 @@ const HomeScreen = () => {
                 <Icon name="menu" size={30} color="#fff"  style={{width:"10%",}} onPress={() => navigation.openDrawer()} />
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Music Player</Text>
 <View style={{height:"100%",width:"40%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
-<View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
+<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
                 <Icon name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
                 <Icon name="search" size={30} color="#fff" onPress={() => navigation.navigation('Settings')} />
                 </View>
@@ -101,7 +100,7 @@ const HomeScreen = () => {
     </View>
  </View>
  <View style={styles.row4}>
-     <View style={{width:65,height:65,backgroundColor:"#f4ce5e",justifyContent:"center",alignItems:"center",borderRadius:50}}>
+     <View style={{width:65,height:65,borderRadius:50,backgroundColor:"#F4CE5E",justifyContent:"center",alignContent:"center",alignItems:"center"}}>
      <Icon name="shuffle"size={30} color="#fff" onPress={()=>navigation.navigate('Library')}/>
      </View>
       </View>
@@ -129,14 +128,13 @@ menubar:{
     flexDirection:"row",
     flexWrap:"wrap",
     alignContent:"center",
-    justifyContent:"space-between",
+    justifyContent:"space-around",
     alignItems:"center",
-   // paddingTop:"5%",
     backgroundColor: '#376f8aef'
 },
 Tiles:{
 flexDirection:"column",
-//backgroundColor:"#76b5c5",
+//backgroundColor:"#76B5C5",
 justifyContent:"center",
 },
 row1:{
@@ -162,42 +160,42 @@ Tile1:{
     height:"80%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"#4691e4",
+    backgroundColor:"#4691E4",
 },
 Tile2:{
     width:"30%",
     height:"80%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"#d49369"
+    backgroundColor:"#D49369"
 },
 Tile3:{
     width:"30%",
     height:"80%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"#d49198"
+    backgroundColor:"#D49198"
 },
 Tile4:{
     width:"30%",
     height:"80%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"#6fb2dc"
+    backgroundColor:"#6FB2DC"
 },
 Tile5:{
     width:"30%",
     height:"80%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"#0dc89b"
+    backgroundColor:"#0DC89B"
 },
 Tile6:{
     width:"30%",
     height:"80%",
     justifyContent:"center",
     alignItems:"center",
-    backgroundColor:"#ab8fdc"
+    backgroundColor:"#AB8FDC"
 },
 TileEmpty:{
     width:"30%",
@@ -233,7 +231,6 @@ leftbox:{
     paddingLeft:"5%"
 },
 rightbox:{
- 
    height:"100%",
    width:"20%",
 justifyContent:"center",
@@ -252,14 +249,15 @@ row3:{
     alignContent:"space-around",
 },
 row4:{
-    height:"28%",
+    height:"27%",
     width:"100%",
     flexDirection:"row",
     backgroundColor:"#376f8aba",
     justifyContent:"flex-end",
     alignItems:"flex-end",
     alignContent:"flex-end",
-    paddingRight:"3%"
+    paddingRight:"3%",
+    paddingBottom:"3%",
 },
 PlayerView:{ 
     width:"100%",

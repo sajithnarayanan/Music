@@ -1,98 +1,118 @@
-import React from 'react';
-import { View, Text, StyleSheet,Image,ScrollView } from 'react-native';
+import React, {useState} from 'react';
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  TextInput,
+  StyleSheet,
+} from 'react-native';
 import AntDesign from 'react-native-vector-icons/AntDesign'
+import Icon from 'react-native-vector-icons/FontAwesome';
+import IconM from 'react-native-vector-icons/MaterialIcons';
+import Icon2 from 'react-native-vector-icons/Entypo';
 const Themes = ({navigation}) => {
-    return (
-      <ScrollView>
-        <View style={styles.container}>
-         <View style={styles.header}>
-           <AntDesign name="arrowleft" size={20} style={{top:"20%"}} onPress={()=>navigation.goBack()}/>
-        <Text style={{left:"10%",bottom:"28%",fontWeight:"bold",color:"white"}}>Themes</Text>
-         </View>
-         <View style={styles.one}>
+  return (
+<>
+    
+<View style={{ height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-around",
+    alignItems:"center",
+    backgroundColor: '#376f8aef'}}>
+                <Icon  name="arrow-left" size={30} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Themes</Text>
+<View style={{height:"100%",width:"50%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>
+                <IconM name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                </View>
+                </View>
+            </View>
+<View style={{height:"92%", backgroundColor: '#376f8aaa',justifyContent:"space-around"}}>
+      <View style={styles.row1}>
+        <View style={styles.box1}>
         <Image
-        style={{height:"30%",width:"30%",right:"6%"}}
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
         source={require('../assets/themes/one.jpg')} />
-        <AntDesign name="download" size={20} color="red" style={{right:"17%",top:"25%"}}/>
-         <Image
-        style={{height:"30%",width:"30%",right:"8%"}}
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
         source={require('../assets/themes/two.jpg')} />
-                <AntDesign name="download" size={20} color="red" style={{right:"19%",top:"25%"}}/>
-         <Image
-        style={{height:"30%",width:"30%",marginBottom:"10%",right:"9.5%",top:"0%"}}
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
         source={require('../assets/themes/three.jpg')} />
-                <AntDesign name="download" size={20} color="red" style={{right:"20%",top:"25%"}}/>
-         </View>
-         <View style={styles.two}>
-        <Image 
-        style={{bottom:"30%",left:"7%",width:"30%",bottom:"115%"}}
-        source={require('../assets/themes/four.jpg')} />
-                        <AntDesign name="download" size={20} color="red" style={{right:"28%",bottom:"95%"}}/>
-          <Image
-        style={{height:"100%",width:"30%",left:"0%",bottom:"115%"}}
-        source={require('../assets/themes/five.jpg')} />
-                        <AntDesign name="download" size={20} color="red" style={{right:"35%",bottom:"95%"}}/>
-         <Image
-        style={{height:"100%",width:"30%",marginBottom:"10%",right:"5%",bottom:"115%"}}
-        source={require('../assets/themes/six.jpg')} />
-                <AntDesign name="download" size={20} color="red" style={{right:"35%",bottom:"95%"}}/>
-         </View>
-      <View style={styles.three}>
-        <Image 
-        style={{left:"4%",bottom:"30%",height:"40%",width:"30%",justifyContent:"flex-start"}}
-        source={require('../assets/themes/main.jpg')} />
-        <Image 
-        style={{left:"36%",bottom:"70%",height:"40%",width:"30%"}}
-        source={require('../assets/themes/main2.jpg')} />
-        <AntDesign name="download" size={20} style={{bottom:"94%" ,left:"15%",color:"red"}}/>
-          <Image 
-        style={{left:"69%",bottom:"114%",height:"40%",width:"30%"}}
-        source={require('../assets/themes/main3.jpg')} />
-         <AntDesign name="download" size={20} style={{bottom:"138%" ,left:"48%",color:"red"}} />
-                <AntDesign name="download" size={20} style={{bottom:"142%" ,left:"82%",color:"red"}}/>
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
       </View>
-         </View>
-         </ScrollView>
-    );
-}
-const styles=StyleSheet.create({
-  container:{
-    height:800,
-    flex:1,
-    paddingTop:"10%",
-    backgroundColor:"#0890B6",
-    opacity:0.7,
-
+      <View style={styles.row1}>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
+        source={require('../assets/themes/four.jpg')} />
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
+        source={require('../assets/themes/five.jpg')} />
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
+        source={require('../assets/themes/six.jpg')} />
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+      </View>
+      <View style={styles.row1}>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
+        source={require('../assets/themes/one.jpg')} />
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
+        source={require('../assets/themes/main.jpg')} />
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+        <View style={styles.box1}>
+        <Image
+        style={{ width: '100%', height: '100%', justifyContent:"center"}}
+        source={require('../assets/themes/main2.jpg')} />
+        <AntDesign name="download" size={20} color="red" style={{position:"absolute"}}/>
+        </View>
+      </View>
+      </View>
+     </>
+  );
+};
+const styles = StyleSheet.create({
+  row1: {
+    height: '30%',
+    width: '100%',
+   // marginTop: '5%',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent:"space-around",
+    alignContent:"center",
   },
-   header:{
-     height:"5%",
-     opacity:0.7,
-     bottom:"4%",
-     backgroundColor:"grey"
-   },
-   one:{
-    flexDirection:"row",
-    height:599,
-    marginBottom:"5%",
-    left:"5.5%",
-    justifyContent:"space-between",
-    marginVertical:".1%"
-   },
-   two:{
-    flexDirection:"row",
+  box1: {
+    height: '100%',
+    width: '30%',
+   // margin: '3%',
+    alignItems:"center",
     justifyContent:"center",
-    alignContent:"flex-start",
-    alignSelf:"auto",
-    left:"1%",
-    top:"1%",
-    marginBottom:"1%"
-     },
-   three:{
-    height:500,
-    right:".7%",
-    bottom:"32%",
-    marginVertical:"1%"
-
-   }
-})
-    export default Themes;
+    backgroundColor:"#70D4FA99",
+    
+  },
+});
+export default Themes;

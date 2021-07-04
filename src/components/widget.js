@@ -8,41 +8,30 @@ import {
   StyleSheet,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import IconM from 'react-native-vector-icons/MaterialIcons';
 import Icon2 from 'react-native-vector-icons/Entypo';
 const Widget = ({navigation}) => {
   return (
     <View style={{flex: 1, backgroundColor: '#376f8aaa'}}>
-      <View
-        style={{
-          flexDirection: 'row',
-          paddingTop: '5%',
-          paddingBottom: '3%',
-          alignContent: 'space-between',
-          flexWrap: 'wrap',
-          backgroundColor: '#376f8aff',
-        }}>
-        <Icon
-          name="arrow-left"
-          size={20}
-          style={{left: '5%', top: '1%', color: 'black'}}
-         onPress={()=>navigation.goBack()}
-        />
-        <Text
-          style={{
-            left: 40,
-            fontWeight: 'bold',
-            fontSize: 20,
-            top: '1%',
-            width: '50%',
-            color: '#fff',
-          }}>
-          Widgets
-        </Text>
-      </View>
+     <View style={{ height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-around",
+    alignItems:"center",
+    backgroundColor: '#376f8aef'}}>
+                <Icon  name="arrow-left" size={30} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Widget</Text>
+<View style={{height:"100%",width:"50%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>
+                <IconM name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                </View>
+                </View>
+            </View>
       <View style={styles.row1}>
         <View style={styles.box1}>
         <Image
-        source={{ uri: 'http://adrianoreyes.com/wp-content/uploads/Widget.jpg',}}
+        source={{ uri: 'https://cdn.dribbble.com/users/1983013/screenshots/6862618/800x600.png?compress=1&resize=400x300',}}
         style={{ width: '80%', height: '80%'}}
       />
         </View>
