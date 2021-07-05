@@ -1,16 +1,27 @@
 import React from 'react';
 import { View, Text,StyleSheet } from 'react-native';
 import Icon1 from 'react-native-vector-icons/Entypo';
+import IconM from 'react-native-vector-icons/MaterialIcons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 const Folder = ({navigation}) => {
     return (
         <View style={styles.container}>
-           <View style={styles.header}>
-           <AntDesign name="arrowleft" size={25}  style={{top:"8%"}} onPress={()=>navigation.goBack()}/>
-            <Text style={styles.text}>FOLDER</Text>
-            <AntDesign name="search1" size={25} style={styles.icon}/>
-            <Icon1 name="dots-three-vertical" size={20} style={styles.Icon1} />
-           </View>
+              <View style={{ height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-around",
+    alignItems:"center",
+    backgroundColor: '#376f8aef'}}>
+                <Icon1  name="arrow-left" size={25} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%",right:"25%" }}>Folder</Text>
+<View style={{height:"100%",width:"50%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>
+<AntDesign name="search1" size={30} color="#fff" onPress={()=>navigation.goBack()}/>
+                <IconM name="card-giftcard" size={30} color="#fff" style={{left:"10%"}} onPress={() => navigation.navigate('Ads')} />
+                </View>
+                </View>
+            </View>
            <View  style={{marginTop:"5%"}}>
                <Icon1 name="folder" size={28} style={{left:"5%",top:"15%",backgroundColor:"grey",width:"10%",paddingLeft:"1.5%"}} onPress={()=>navigation.navigate('Recent')}/>
                <Text style={{left:"20%",bottom:"21%",fontSize:17}}>audio</Text>
