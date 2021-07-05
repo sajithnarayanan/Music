@@ -1,17 +1,26 @@
 import React from 'react';
 import { View, Text,Button,StyleSheet, TouchableOpacity } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome'
-import Icon1 from 'react-native-vector-icons/MaterialIcons';
-import Icon2 from 'react-native-vector-icons/Entypo';
+import AntDesign from 'react-native-vector-icons/AntDesign'
+import IconM from 'react-native-vector-icons/MaterialIcons';
 const Fav = ({navigation}) => {
     return (
         <View style={styles.container}>
-            <View style={styles.main}>
-            <Icon name="arrow-left" size={20} style={styles.icon1} onPress={()=>navigation.goBack()}/>
-            <Text style={styles.text}>FAVORITE</Text>
-             <Icon1 name="search" size={30} color="black" style={styles.icon} onPress={() => navigation.navigate('HomeScreen')} />
-                <Icon1 name="card-giftcard" size={30} color="black" style={styles.icon2} onPress={() => navigation.navigate('Ads')} />
-            <Icon2 name="dots-three-vertical" size={22} style={styles.icon3} />
+            <View style={{ height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-around",
+    alignItems:"center",
+    backgroundColor: '#376f8aef'}}>
+                <Icon  name="arrow-left" size={25} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Favorite</Text>
+<View style={{height:"100%",width:"50%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>
+<AntDesign name="search1" size={30} color="#fff" onPress={()=>navigation.goBack()}/>
+                <IconM name="card-giftcard" size={30} color="#fff" style={{left:"10%"}} onPress={() => navigation.navigate('Ads')} />
+                </View>
+                </View>
             </View>
             <Icon name="music" size={40} style={styles.music} />
             <Text style={styles.text2}>No music found</Text>
