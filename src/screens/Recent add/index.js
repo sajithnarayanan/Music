@@ -3,6 +3,8 @@ import Icon from 'react-native-vector-icons/Entypo'; //3dots
 import Icon1 from 'react-native-vector-icons/AntDesign'; //playnext
 import Icon2 from 'react-native-vector-icons/MaterialCommunityIcons'; //playlist-plus
 import Icon3 from 'react-native-vector-icons/FontAwesome';
+import IconM from 'react-native-vector-icons/MaterialIcons';
+
 import {  
     View,
     Text,
@@ -12,6 +14,7 @@ import {
     Modal,
     TouchableOpacity,
  } from 'react-native';
+
  const styles = StyleSheet.create({
   container: {
     paddingTop: '0.1%',
@@ -22,26 +25,25 @@ import {
     flexDirection: 'row',
     alignItems: 'flex-start',
   },
+  fileNameView: {
+    marginLeft: '4%',
+    marginTop:"2%",
+    flexDirection: 'column',
+  },
   fileName: {
     color: 'white',
     marginTop: '2.5%',
     marginBottom: '2.5%',
-    paddingLeft: '1%',
-    fontSize: 20,
+    fontSize: 18,
   },
   fileName2: {
     fontSize: 15,
-    paddingBottom: '1%',
-    paddingLeft: '1%',
     color: 'white',
-  },
-  fileNameView: {
-    marginLeft: '3%',
-    flexDirection: 'column',
   },
   audioImage: {
     height: 50,
     width: 50,
+
     marginTop: '2.5%',
     marginBottom: '2.5%',
   },
@@ -88,9 +90,9 @@ import {
     justifyContent: "center",
     alignContent:"space-between",
     margin: '1%',
-   // marginTop:"7%",
    borderWidth:1,
    borderColor:"transparent",
+
   },
   IconsRow: {
     backgroundColor: '#376f8a',
@@ -111,7 +113,8 @@ import {
     alignItems: 'center',
   },
 });
-const Recentadd = () => {
+
+const Recentadd = ({navigation}) => {
     const [modalOpen, setModalOpen] = useState(false);
     return (
         <>
@@ -119,6 +122,7 @@ const Recentadd = () => {
           <TouchableOpacity
             style={styles.modalViewTop}
             onPress={() => setModalOpen(false)}></TouchableOpacity>
+
         <View style={styles.modalViewBottom}>
           <View style={styles.ModalHeaderView}>
             <Text style={styles.ModalHeaderText}>Audio file.mp4</Text>
@@ -130,21 +134,25 @@ const Recentadd = () => {
                 <Icon1 name="stepforward" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}>Play Next</Text>
               </TouchableOpacity>
+
               <TouchableOpacity>
                 <Icon3 name="cut" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}> Trim</Text>
               </TouchableOpacity>
             </View>
+
             <View style={styles.IconsRow}>
               <TouchableOpacity>
                 <Icon1 name="plussquareo" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}> Add To</Text>
               </TouchableOpacity>
+
               <TouchableOpacity>
                 <Icon2 name="image" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}> ArtWork</Text>
               </TouchableOpacity>
             </View>
+
             <View style={styles.IconsRow}>
               <TouchableOpacity>
                 <Icon2
@@ -154,16 +162,19 @@ const Recentadd = () => {
                 />
                 <Text style={styles.iconText}> Enqueue</Text>
               </TouchableOpacity>
+
               <TouchableOpacity>
                 <Icon1 name="sharealt" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}> Share</Text>
               </TouchableOpacity>
             </View>
+
             <View style={styles.IconsRow}>
               <TouchableOpacity>
                 <Icon1 name="bells" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}>ringtone</Text>
               </TouchableOpacity>
+
               <TouchableOpacity>
                 <Icon1 name="delete" style={styles.modalIcon} size={20} />
                 <Text style={styles.iconText}> delete</Text>
@@ -173,8 +184,30 @@ const Recentadd = () => {
         </View>
         </View>
       </Modal>
+
      <View>
+
+     
       <Image source={require('../../assets/RecentBg.jpg')} style={{ position:"absolute", width: "100%", height:"100%"}} />
+
+
+      <View style={{  height:"8%",
+    flexDirection:"row",
+    flexWrap:"wrap",
+    alignContent:"center",
+    justifyContent:"space-between",
+    alignItems:"center",
+    backgroundColor: '#376f8aef'}}>
+               <Icon name="arrow-left" size={25} style={{left: '5%', top: '1%', color: '#fff'}} onPress={() => navigation.goBack()}/>
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Recent Add</Text>
+<View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
+<View style={{height:"100%",width:"30%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
+                <IconM name="card-giftcard" size={30} color="#fff"  onPress={() => navigation.navigate('Ads')} />
+                <IconM name="search" size={30} color="#fff"  />
+                </View>
+                </View>
+            </View>
+
       <ScrollView style={{backgroundColor:'#376f8aba',height:"100%"}}>
       
         <TouchableOpacity>
@@ -189,6 +222,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Narabali.mp4</Text>
               <Text style={styles.fileName2}>Nayattu</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -209,6 +243,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Appalaale.mp4</Text>
               <Text style={styles.fileName2}>Nayattu</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -217,6 +252,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -229,6 +265,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Innale Mellane.mp4</Text>
               <Text style={styles.fileName2}>nizhal</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -237,6 +274,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -249,6 +287,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Did She Catch Me.mp4</Text>
               <Text style={styles.fileName2}>Kho Kho</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -257,6 +296,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -269,6 +309,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Stereo Hearts.mp4</Text>
               <Text style={styles.fileName2}>Gym-class heroes</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -277,6 +318,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
      <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -289,6 +331,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Chekuthan.mp4</Text>
               <Text style={styles.fileName2}>Chekuthan</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -309,6 +352,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Kollappedum.mp4</Text>
               <Text style={styles.fileName2}>Ribin Richard-ft.Nihal Sadiq</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -317,6 +361,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -329,6 +374,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Oblivion.mp4</Text>
               <Text style={styles.fileName2}>Oblivion</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -337,6 +383,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -349,6 +396,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>Life Of Charlie.mp4</Text>
               <Text style={styles.fileName2}>777 Charlie (Malayalam)</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -357,6 +405,7 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
         <TouchableOpacity>
           <View style={styles.container}>
             <Image
@@ -369,6 +418,7 @@ const Recentadd = () => {
               <Text style={styles.fileName}>24k Magic.mp4</Text>
               <Text style={styles.fileName2}>Bruno Mars</Text>
             </View>
+
             <Icon
               name="dots-three-vertical"
               style={styles.dotIcon}
@@ -377,10 +427,12 @@ const Recentadd = () => {
             />
           </View>
         </TouchableOpacity>
+
       </ScrollView>
       </View>
     </>
   
     );
 }
+
 export default Recentadd;
