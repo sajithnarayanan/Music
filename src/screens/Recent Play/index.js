@@ -15,7 +15,7 @@ const Recent = ({navigation}) => {
     alignItems:"center",
     backgroundColor: '#376f8aef'}}>
                 <Icon  name="arrow-left" size={25} color="#fff"  style={{width:"10%",}}  onPress={() => navigation.goBack()} />
-                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%",right:"25%" }}>Folder</Text>
+                <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%",right:"25%" }}>Recent Play</Text>
 <View style={{height:"100%",width:"50%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
 <View style={{height:"100%",width:"43%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"flex-end", }}>
 <AntDesign name="search1" size={30} color="#fff"  style={{right:"20%"}} onPress={()=>navigation.goBack()}/>
