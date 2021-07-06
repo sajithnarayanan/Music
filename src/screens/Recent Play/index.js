@@ -23,40 +23,40 @@ const Recent = ({navigation}) => {
                 </View>
                 </View>
             </View>
-            <View style={{justifycontent:"center",bottom:"2%",paddingLeft:"2%"}}>
-        <Pressable><Icon name="music" size={25} style={{top:40}} />
-          <Text style={{left:50,top:20}}>Audio.mp3</Text>
+            <View style={{justifycontent:"center",bottom:"2%",paddingHorizontal:"4%"}}>
+        <Pressable><Icon name="music" size={25} style={{top:45}} />
+          <Text style={{left:50,top:25}}>Audio.mp3</Text>
           <AntDesign name="barchart" size={30} style={{left:220}}/>
           <Icon1 name="dots-three-vertical" size={25} style={{left:310,top:-25}} />
           </Pressable>
           </View>
-          <View  style={{justifycontent:"center",bottom:"2%",paddingLeft:"2%"}}>
-          <Icon name="music" size={25} style={{top:30}} />
-          <Text style={{left:50,top:10}}>Audio1.mp3</Text>
+          <View  style={{justifycontent:"center",bottom:"2%",paddingHorizontal:"4%"}}>
+          <Icon name="music" size={25} style={{top:35}} />
+          <Text style={{left:50,top:15}}>Audio1.mp3</Text>
           <AntDesign name="barchart" size={30} style={{left:220,top:-10}}/>
           <Icon1 name="dots-three-vertical" size={25} style={{left:310,top:-35}} />
           </View>
-          <View  style={{justifycontent:"center",bottom:"2%",paddingLeft:"2%"}}>
-          <Icon name="music" size={25} style={{top:30}} />
-          <Text style={{left:50,top:10}}>Title track1.mp3</Text>
+          <View  style={{justifycontent:"center",bottom:"2%",paddingHorizontal:"4%"}}>
+          <Icon name="music" size={25} style={{top:35}} />
+          <Text style={{left:50,top:15}}>Title track1.mp3</Text>
           <AntDesign name="barchart" size={30} style={{left:220,top:-10}}/>
           <Icon1 name="dots-three-vertical" size={25} style={{left:310,top:-35}} />
           </View>
-          <View  style={{justifycontent:"center",bottom:"2%",paddingLeft:"2%"}}>
-          <Icon name="music" size={25} style={{top:30}} />
-          <Text style={{left:50,top:10}}>Title track2.mp3</Text>
+          <View  style={{justifycontent:"center",bottom:"2%",paddingHorizontal:"4%"}}>
+          <Icon name="music" size={25} style={{top:35}} />
+          <Text style={{left:50,top:15}}>Title track2.mp3</Text>
           <AntDesign name="barchart" size={30} style={{left:220,top:-10}}/>
           <Icon1 name="dots-three-vertical" size={25} style={{left:310,top:-35}} />
           </View>
-          <View  style={{justifycontent:"center",bottom:"2%",paddingLeft:"2%"}}>
-          <Icon name="music" size={25} style={{top:30}} />
-          <Text style={{left:50,top:10}}>Title track3.mp3</Text>
+          <View  style={{justifycontent:"center",bottom:"2%",paddingHorizontal:"4%"}}>
+          <Icon name="music" size={25} style={{top:35}} />
+          <Text style={{left:50,top:15}}>Title track3.mp3</Text>
           <AntDesign name="barchart" size={30} style={{left:220,top:-10}}/>
           <Icon1 name="dots-three-vertical" size={25} style={{left:310,top:-35}} />
           </View>
-          <View  style={{justifycontent:"center",bottom:"2%",paddingLeft:"2%"}}>
-          <Icon name="music" size={25} style={{top:30}} />
-          <Text style={{left:50,top:10}}>Download track1.mp3</Text>
+          <View  style={{justifycontent:"center",bottom:"2%",paddingHorizontal:"4%"}}>
+          <Icon name="music" size={25} style={{top:35}} />
+          <Text style={{left:50,top:15}}>Download track1.mp3</Text>
           <AntDesign name="barchart" size={30} style={{left:220,top:-10}}/>
           <Icon1 name="dots-three-vertical" size={25} style={{left:310,top:-35}} />
           </View>
