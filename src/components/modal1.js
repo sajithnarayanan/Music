@@ -20,7 +20,7 @@ const ModalStack = ({navigation}) => {
           <View style={styles.modalView}>
          <Text>Create a new playlist</Text>
         <TextInput placeholder="Enter your playlist here!"   style={{borderWidth:1,borderColor:"gray", width:"100%",height:40,borderRadius:10,marginBottom:10}} maxLength={10}></TextInput>
-        <Pressable ><Text style={{color:"cyan",left:130}}onPress={()=>setModalVisible(true)}>CANCEL</Text></Pressable>
+        <Pressable ><Text style={{color:"cyan",left:130}}onPress={()=>setModalVisible(false)}>CANCEL</Text></Pressable>
         <Pressable><Text style={{color:"cyan",left:220,top:-18}} onPress={()=>navigation.navigate('HomeScreen')}>OK</Text></Pressable>
           </View>
         </View>
