@@ -19,6 +19,7 @@ import Hidden from '../components/hidden';
 import Themes from './themes';
 import Timer from '../components/timer';
 import Widget from '../components/widget';
+import { color } from 'react-native-elements/dist/helpers';
 const Drawer = createDrawerNavigator();
 
 // const HomeStackScreen = ({navigation})=>(
@@ -32,64 +33,20 @@ const Drawer = createDrawerNavigator();
 
 
 const Main = ({ navigation }) => {
-    const[main,Setmain]=useState('Shuffle');
-    const clickHandler=() =>{
-        Setmain('Order');
-
-    }
+   
     return (
 
-        <Drawer.Navigator initialRouteName=""  headerMode={false}>
-            <Drawer.Screen name="Home" component={HomeStack} options={{
-                headerLeft: () => (
-                    <AntDesign name="search1" size={40} width={60} height={60} color="black" backgroundColor="red" onPress={() => navigation.navigate('stack')}></AntDesign>
-                )
-            }} />
-            <Drawer.Screen name="Scan Libraries" component={Scan} options={{
-                 headerLeft: () => (
-                    <Icon.Button name="lens" size={20} width={60} height={60} style={{ marginRight: 20 }} color="black" backgroundColor="#fff" onPress={() => navigation.navigate('default')}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Orders" component={Equalizer} options={{
-                title: "Equalizer", headerLeft: () => (
-                    <Icon.Button name="menu-unfold" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Shuffle" component={HomeScreen} options={{
-                headerLeft: () => (
-                        onPress={clickHandler}
-                        )
-            }} />
-            <Drawer.Screen name="Theme" component={Themes} options={{
-                headerLeft: () => (
-                    <Icon.Button name="search2" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Widget" component={Widget} options={{
-                headerLeft: () => (
-                    <Icon.Button name="youtube" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Sleep Timer" component={Timer} options={{
-                headerLeft: () => (
-                    <Icon.Button name="youtube" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Drive mode" component={Drive} options={{
-                headerLeft: () => (
-                    <Icon.Button name="youtube" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Hidden feautres" component={Hidden} options={{
-                headerLeft: () => (
-                    <Icon.Button name="youtube" size={40} width={60} height={60} color="black" backgroundColor="#fff" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
-            <Drawer.Screen name="Settings" component={Setting} options={{
-                headerLeft: () => (
-                    <Icon.Button name="gear" size={40} width={60} height={60} style={{ left: 10 }} color="black" backgroundColor="red" onPress={() => navigation.openDrawer()}></Icon.Button>
-                )
-            }} />
+        <Drawer.Navigator initialRouteName="" >
+            <Drawer.Screen name="Home" component={HomeStack} style={{height:"100%",color:"red"}}/>
+            <Drawer.Screen name="Scan Libraries" component={Scan} />
+            <Drawer.Screen name="Orders" component={Equalizer} />
+            <Drawer.Screen name="Shuffle" component={HomeScreen} />
+            <Drawer.Screen name="Theme" component={Themes} />
+            <Drawer.Screen name="Widget" component={Widget} />
+            <Drawer.Screen name="Sleep Timer" component={Timer} />
+            <Drawer.Screen name="Drive mode" component={Drive} />
+            <Drawer.Screen name="Hidden feautres" component={Hidden} />
+            <Drawer.Screen name="Settings" component={Setting} />
 
         </Drawer.Navigator>
 

@@ -1,11 +1,13 @@
-import React from 'react';
-import { View, Text, Image, TouchableOpacity, Pressable,StyleSheet } from 'react-native';
+import React,{useState} from 'react';
+import { View, Text, Image, TouchableOpacity, Pressable,StyleSheet,Modal,TextInput,KeyboardAvoidingView } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Iconf from 'react-native-vector-icons/Foundation';
 import { useNavigation } from '@react-navigation/native';
 const HomeScreen = () => {
     const navigation = useNavigation();
+    const[modalOpen,setModalOpen]=useState(false);
     return (
+    
         <View style={styles.container}>
   <View style={styles.menubar}>
                 <Icon name="menu" size={30} color="#fff"  style={{width:"10%",}} onPress={() => navigation.openDrawer()} />
@@ -93,7 +95,7 @@ const HomeScreen = () => {
     </TouchableOpacity >
     <TouchableOpacity  style={styles.Tile4} >
     <View style={styles.InnerTilesBox}>
-    <Icon name="add" size={60}  color="white" onPress={() => navigation.navigate('ModalStack')}/>
+    <Icon name="add" size={60}  color="white"onPress={() => setModalOpen(true)}/>
         </View>
     </TouchableOpacity >
     <View style={styles.TileEmpty}>
@@ -132,6 +134,29 @@ menubar:{
     alignItems:"center",
     backgroundColor: '#376f8aef'
 },
+writeTaskWrapper: {
+    position: 'absolute',
+    bottom: 60,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+  },
+centeredView: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 42
+  },
+  modalView: {
+    width:"80%",
+    height:"20%",
+    backgroundColor: "#fff",
+    padding: 20,
+    
+
+ 
+    },
 Tiles:{
 flexDirection:"column",
 //backgroundColor:"#76B5C5",

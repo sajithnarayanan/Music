@@ -198,7 +198,7 @@ const Recentadd = ({navigation}) => {
     justifyContent:"space-between",
     alignItems:"center",
     backgroundColor: '#376f8aef'}}>
-               <Icon name="arrow-left" size={25} style={{left: '5%', top: '1%', color: '#fff'}} onPress={() => navigation.goBack()}/>
+               <Icon1 name="arrowleft" size={25} style={{left: '5%', bottom: '1%',color:"#fff" }} onPress={() => navigation.goBack()}/>
                 <Text style={{color:"#fff", fontFamily: "italic", fontWeight: "bold", fontSize: 20,marginTop:"1%" }}>Recent Add</Text>
 <View style={{height:"100%",width:"60%",flexDirection:"row", flexWrap:"wrap", alignContent:"center",justifyContent:"flex-end",}}>
 <View style={{height:"100%",width:"30%",flexDirection:"row", flexWrap:"wrap",alignItems:"center", alignContent:"center",justifyContent:"space-between", }}>
